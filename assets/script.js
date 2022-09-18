@@ -31,5 +31,25 @@ const randomSpecialCharacter = () => {
   const SpecialCharacter = [ "!", "@", "#", "$", "^", "%", "&", "*", "(", ")", "{", "}", "[",
    "]", "=", "<", ">", "/", "?", ",", ".", "-", "_", "+", "~", "`"];
 
-   return SpecialCharacter[Math.floor(Math.random() * SpecialCharacter.length]
+   return SpecialCharacter[Math.floor(Math.random() * SpecialCharacter.length)];
+}
+
+var getPasswordLength = () => {
+  let passwordLengthString = 
+  promt ("What is the length of the password? (The password must be at least 8 characters long and at most 128 characters long)");
+
+  return parseInt(passwordLengthString, 10);
+}
+
+var validatePasswordLength = (passwordLength) => {
+  if(Number.isNaN(passwordLength)) {
+    alert("Please type out a number");
+    return false;
+  } else if (passwordLength < 8 && passwordLength > 128){
+    alert("Please enter a number that is equal to or greater than 8, or a number that is equal to or less than 128");
+    return false;
+  } else {
+    return true;
+  }
+  
 }
