@@ -78,14 +78,14 @@ function generatePassword() {
     options.push(symbolList)
   }
  
-  if (optionsCart.length === 0) {
+  if (options.length === 0) {
     options.push(lowercaseList)
   }
  
   var generatedPassword = ""
  
   for (var i = 0; i < passwordLength; i++) {
-    var randomList = getRandomItem(optionsCart)
+    var randomList = getRandomItem(options)
     var randomChar = getRandomItem(randomList)
     generatedPassword += randomChar
   }
